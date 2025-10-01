@@ -25,6 +25,11 @@ export default defineNuxtConfig({
 
   // 静态站点生成配置
   ssr: false,
+  
+  // 确保静态生成
+  generate: {
+    fallback: true
+  },
 
   compatibilityDate: '2025-01-15',
 
