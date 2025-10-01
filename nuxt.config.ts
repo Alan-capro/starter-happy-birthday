@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     '/': { prerender: true }
   },
 
+  // 静态站点生成配置
+  ssr: false,
+
   compatibilityDate: '2025-01-15',
 
   eslint: {
