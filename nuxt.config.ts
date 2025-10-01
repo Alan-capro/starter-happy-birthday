@@ -11,6 +11,14 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // 静态生成配置
+  nitro: {
+    prerender: {
+      routes: ['/']
+    }
+  },
+
+  // 路由规则 - 所有页面都预渲染
   routeRules: {
     '/': { prerender: true }
   },
