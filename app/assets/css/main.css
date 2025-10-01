@@ -16,3 +16,61 @@
   --color-green-900: #0A5331;
   --color-green-950: #052E16;
 }
+
+/* iPhone 15 优化样式 */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari 特定样式 */
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 428px) {
+  /* iPhone 15 尺寸优化 */
+  .mobile-optimized {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* 生日主题动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* 触摸反馈 */
+.touch-feedback {
+  transition: transform 0.1s ease;
+}
+
+.touch-feedback:active {
+  transform: scale(0.95);
+}
